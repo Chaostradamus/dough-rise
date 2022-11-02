@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { UserAuth } from "../../context/AuthContext";
+import { FaSearch, FaCaretDown } from "react-icons/fa";
 
 function Header() {
   const { user, logOut } = UserAuth();
@@ -14,14 +15,19 @@ function Header() {
   };
   return (
     <div className="flex justify-between">
+      <div className="flex flex-row  align-item-center ">
+        <input type="text" className="grow-0 rounded-full align-center "></input>
+        <FaSearch />
+      </div>
       {user?.displayName ? (
-        <div>
-          <p> Welcome , {user?.displayName}</p>
+        <div className="flex flex-row">
+          <p className="px-10"> Welcome , {user?.displayName}</p>
           <button onClick={handleSignOut}>Logout</button>
         </div>
       ) : (
         <Link to="/login">Sign In</Link>
       )}
+      <FaCaretDown />
     </div>
   );
 }
