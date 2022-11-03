@@ -1,5 +1,5 @@
 import React from "react";
-import BudgetCard from "../components/budgetCard";
+import {BudgetCard} from "../components/BudgetCard";
 import CategoryCard from "../components/categoryCard";
 import Header from "../components/header";
 import Sidebar from "../components/sidebar";

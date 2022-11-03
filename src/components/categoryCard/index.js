@@ -1,10 +1,15 @@
 import React from "react";
+import { FaPlusCircle } from "react-icons/fa";
 
 function CategoryCard() {
   return (
     <div>
-      <span className="justify-start">Active Budget</span>
-      <span className="justify-end">See All</span>
+      <div className="flex justify-between ">
+        <span className="">Category</span>
+        <span className="flex ">
+          <FaPlusCircle />
+        </span>
+      </div>
     </div>
   );
 }
